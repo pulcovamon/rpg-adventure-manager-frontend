@@ -44,32 +44,32 @@ export default function SideMenu({ isDarkMode }: { isDarkMode: boolean }) {
                 <MenuItem
                     component={<Link to="/worlds" />}
                     icon={<TbWorld size={iconSize} />}
-                    active={location.pathname === "/worlds"}
+                    active={location.pathname.startsWith("/worlds")}
                 />
                 <MenuItem
                     component={<Link to="/campaigns" />}
                     icon={<GiMedievalPavilion size={iconSize} />}
-                    active={location.pathname === "/campaigns"}
+                    active={location.pathname.startsWith("/campaigns")}
                 />
                 <MenuItem
                     component={<Link to="/encounters" />}
                     icon={<GiAxeSword size={iconSize} />}
-                    active={location.pathname === "/encounters"}
+                    active={location.pathname.startsWith("/encounters")}
                 />
                 <MenuItem
                     component={<Link to="/characters" />}
                     icon={<GiCrestedHelmet size={iconSize} />}
-                    active={location.pathname === "/characters"}
+                    active={location.pathname.startsWith("/characters")}
                 />
                 <MenuItem
                     component={<Link to="/settings" />}
                     icon={<IoMdSettings size={iconSize} />}
-                    active={location.pathname === "/settings"}
+                    active={location.pathname.startsWith("/settings")}
                 />
                 <MenuItem
                     component={<Link to="/account" />}
                     icon={<MdAccountCircle size={iconSize} />}
-                    active={location.pathname === "/account"}
+                    active={location.pathname.startsWith("/account")}
                 />
             </Menu>
         </Sidebar>
