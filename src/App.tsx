@@ -9,6 +9,7 @@ import Characters from './lib/pages/Characters';
 import Settings from './lib/pages/Settings';
 import UserAccount from './lib/pages/UserAccount';
 import Campaigns from './lib/pages/Campaigns';
+import WorldDetail from './lib/pages/WorldDetail';
 
 function App() {
   const [isDarkMode, setDarkMode] = React.useState(false);
@@ -22,12 +23,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />}>
           <Route index element={<HomePage />} />
-          <Route path="worlds" element={<Worlds />} />
+          <Route path="worlds" element={<Worlds isDarkMode={isDarkMode} />} />
           <Route path='campaigns' element={<Campaigns />} />
           <Route path="encounters" element={<Encounters />} />
           <Route path="characters" element={<Characters />} />
           <Route path="settings" element={<Settings />} />
           <Route path='account' element={<UserAccount />} />
+          <Route path='worlds/:id' element={<WorldDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>
